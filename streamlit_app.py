@@ -1,9 +1,5 @@
 import streamlit as st
 
-
-# =========================
-# 1) CLASS (dengan getter/setter)
-# =========================
 class Product:
     def __init__(self, name: str, price: float):
         self._name = None
@@ -76,10 +72,6 @@ class Cart:
         lines.append(f"TOTAL = Rp {self.total():,.0f}")
         return "\n".join(lines)
 
-
-# =========================
-# 2) REPOSITORY untuk CRUD katalog
-# =========================
 class ProductRepository:
     def __init__(self, initial=None):
         self._products = initial[:] if initial else []
